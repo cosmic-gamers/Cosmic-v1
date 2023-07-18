@@ -1,0 +1,6 @@
+
+  services:
+  - type: web
+    name: cosmic
+    env: docker
+    plan: free

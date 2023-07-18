@@ -1,0 +1,934 @@
+ <!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Changelog</title>
+<script src="/assets/js/themecontrol.js"></script>
+<link rel="stylesheet" href="assets/css/changelog.css" />
+<link rel="stylesheet" href="assets/css/nav.css" />
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<title>Changelog</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle {
+    height: auto;
+    min-height: 150px;
+    width: 990px;
+    border-radius: 15px;
+    background-color: #1f2029;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-top: 22px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-left: 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.release {
+  margin: auto;
+  margin-bottom: 40px;
+  width: 60%;
+  /* border: 3px solid green; */
+  padding: 10px;
+}
+
+.release img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* To top/bottom */
+.to-bottom {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #1f2029;
+  justify-content: center;
+  align-items: center
+}
+
+.to-top {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #1f2029;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+p {
+  display: inline;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+/* Icon Positioning */
+
+.first {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    
+}
+
+.second {
+    margin-left: 30px;
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
+
+.third {
+    margin-left: 30px;
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
+
+
+.fourth {
+    margin-left: 30px;
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
+
+/* Button Designs */
+
+.new {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(28, 77, 255);
+    
+}
+
+.update {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(255, 214, 31);
+}
+
+.remove {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #ff0000;
+}
+
+.fix {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(201, 171, 0);
+}
+    /* More Less Buttons */
+#btn {
+  font-size: 16px;
+  background-color: transparent;
+  color: rgb(11,141,255);
+  padding: 6px 15px 6px 15px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-left: 30px;
+  margin-top: 12px;
+}
+
+#dots {
+  display: inline;
+}
+
+#invisible-text {
+  display: none;
+  transition: max-height 0.5s ease;
+}
+
+.expand {
+  transition: max-height 0.5s ease;
+  max-height: 1000px; /* Set an appropriate value to ensure the content fully expands */
+}
+    
+  </style>
+
+</head>
+   <body>
+       <div class="header2">
+      <br>
+      <a href="/../" class="logo">Cosmic</a>
+      <div class="header2-right">
+        <a href="search">Search</a>
+        <a href="play">Games</a>
+        <a href="apps">Apps</a>
+        <a href="settings">Settings</a>
+      </div>
+    </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+     <div class="btn-container">
+     <button class="to-bottom" id="scroll-bottom-button">
+       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><style>svg{fill:#ffffff}</style><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+     </button> 
+       </div>
+      <!-- ====== 1.8.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.8.0</h2>
+            <p class="date">Monday, 17 July, 2023</p>
+        </div>
+
+      <div class="first">
+        <button class="new">New</button>
+          <p>Added game "Big Red Button"</p>
+     </div>
+      
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Build Your Car"</p>
+     </div>
+      
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Dreader"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Dumb Ways to Die"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "G-Switch 2"</p>
+     </div>
+      
+       <div class="second">
+        <button class="new">New</button>
+          <p>Added game "G-Switch 3"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Highway Racer"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "House of hazards"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Icy Purple Head"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Icy Purple Head 2"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Icy Purple Head 3"</p>
+     </div>
+
+       <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Isleward"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Idle Dice"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Idle Miner"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Idle Startup"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Iron Snout"</p>
+     </div>
+
+       <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Iron Snout 2"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Lines to Fill"</p>
+     </div>
+
+       <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Jelly Truck"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Jetpack Joyride"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Mad Gunz"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Mad Trucks"</p>
+     </div>
+
+      <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed game "Idle Breakout"</p>
+     </div>
+
+        <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed app "Instagram"</p>
+     </div>
+    </div>
+</div>
+     <!-- ====== 1.8.0 END ===== -->
+      <!-- ====== 1.7.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.7.0</h2>
+            <p class="date">Monday, 10 July, 2023</p>
+        </div>
+
+      <div class="first">
+        <button class="new">New</button>
+          <p>Added game "3D Car Sim"</p>
+     </div>
+      
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Angry Gran Run"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Ape Sling"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Car Thief"</p>
+     </div>
+      
+       <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Car Parking"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Crash Racing"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Crowd Run"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Colour Road"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Cubito"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Eagle Ride"</p>
+     </div>
+
+       <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Eggy Car"</p>
+     </div>
+
+      <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Endless Truck"</p>
+     </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Dunk Brush"</p>
+    </div>
+      
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Elastic Man"</p><span id="dots">...</span>
+    </div>
+ <span id="invisible-text">    <!-- invisible text -->
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Drive Mad"</p>
+    </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "FNAF 1"</p>
+    </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Football Legends"</p>
+    </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Fortride"</p>
+    </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Go Kart Go!"</p>
+      </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Gold Digger"</p>
+    </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Golfinity"</p>
+    </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "G-Switch"</p>
+    </div>
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added game "Guess the Kitty"</p>
+    </div>
+
+      <div class="second">
+       <button class="update">Update</button>
+          <p>Updated Changelog Page</p>
+    </div>
+
+       <div class="second">
+       <button class="update">Update</button>
+          <p>Added Navbar to Games Page</p>
+    </div>
+
+       <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed game "Frogger"</p>
+     </div>
+
+       <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed game "FNAF 2 (Scratch)"</p>
+     </div>
+
+      <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed game "Bury My Bones"</p>
+     </div>
+      </span>
+      <button id="btn" onclick="moreLess()">Read More</button>
+    </div>
+</div>
+     <!-- ====== 1.7.0 END ===== -->
+      <!-- ====== 1.6.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.6.0</h2>
+            <p class="date">Monday, 3 July, 2023</p>
+        </div>
+      
+      <div class="first">
+        <button class="fix">Fix</button>
+          <p>Fixed game icon "Twitch Tetris"</p>
+     </div>
+
+      <div class="second">
+        <button class="fix">Fix</button>
+          <p>Fixed game icon "Supply Chain Idle"</p>
+     </div>
+
+      <div class="second">
+        <button class="fix">Fix</button>
+          <p>Fixed game icon "Space"</p>
+     </div>
+
+      <div class="second">
+        <button class="fix">Fix</button>
+          <p>Fixed game icon "Mortal Kombat 4"</p>
+     </div>
+
+       <div class="second">
+        <button class="fix">Fix</button>
+          <p>Fixed game icon "Haunted School 1"</p>
+     </div>
+
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added app "Friv"</p>
+    </div>
+      
+      <div class="second">
+       <button class="new">New</button>
+          <p>Added link generator <a href="https://don-t.online">don-t.online</a></p>
+    </div>
+      
+       <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed app "Geforce Now"</p>
+     </div>
+
+       <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed game "GBA Games"</p>
+     </div>
+
+      <div class="second">
+        <button class="remove">Removed</button>
+          <p>Removed game "GBA Games 2"</p>
+     </div>
+    </div>
+</div>
+     <!-- ====== 1.6.0 END ===== -->
+      <!-- ====== 1.5.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.5.0</h2>
+            <p class="date">Monday, 26 June, 2023</p>
+        </div>
+        <div class="first">
+       <button class="new">New</button>
+          <p>Added game "Riddle School"</p>
+    </div>
+
+    <div class="second">
+        <button class="new">New</button>
+          <p>Added app "Movies"</p>
+     </div>
+
+     <div class="third">
+        <button class="new">New</button>
+          <p>Added app "Optus Sport"</p>
+     </div>
+
+     <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed game "Now.gg"</p>
+     </div>
+      
+       <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed game "Now.gg 2"</p>
+       </div>
+    </div>
+</div>
+     <!-- ====== 1.5.0 END ===== -->
+     <!-- ====== 1.4.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.4.0</h2>
+            <p class="date">Monday, 19 June, 2023</p>
+        </div>
+        <div class="first">
+       <button class="new">New</button>
+          <p>Added game "Electric Man 2"</p>
+    </div>
+
+    <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Happy Wheels"</p>
+     </div>
+
+     <div class="third">
+        <button class="new">New</button>
+          <p>Added game "Papas Bakeria"</p>
+     </div>
+
+     <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Papas Cupcakeria"</p>
+     </div>
+      
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Papas Sushiria"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Papas Freezeria"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Papas Pizzaria"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added app "Quran"</p>
+     </div>
+    </div>
+</div>
+     <!-- ====== 1.4.0 END ===== -->
+      <!-- ====== 1.3.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.3.0</h2>
+            <p class="date">Monday, 12 June, 2023</p>
+        </div>
+        <div class="first">
+       <button class="new">New</button>
+          <p>Added game "3D Dino"</p>
+    </div>
+
+    <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Among Us"</p>
+     </div>
+
+     <div class="third">
+        <button class="new">New</button>
+          <p>Added game "Block World"</p>
+     </div>
+
+     <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Castel Wars"</p>
+     </div>
+      
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Castel Wars: Modern"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Castel Wars: Middle Ages"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "New Era"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed game "Doom 1/2"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed game "Krunker"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed app "Discord"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed app "Snapchat"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="remove">Removed</button>
+          <p>Removed app "TikTok"</p>
+     </div>
+    </div>
+</div>
+     <!-- ====== 1.3.0 END ===== -->
+     <!-- ====== 1.2.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.2.0</h2>
+            <p class="date">Monday, 5 June, 2023</p>
+        </div>
+        <div class="first">
+       <button class="new">New</button>
+          <p>Added game "Bury My Bones"</p>
+    </div>
+
+    <div class="second">
+        <button class="new">New</button>
+          <p>Added game "Crazy Tycoon"</p>
+     </div>
+
+     <div class="third">
+        <button class="new">New</button>
+          <p>Added game "Get on Top"</p>
+     </div>
+
+     <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Soccer Random"</p>
+     </div>
+      
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Volley Random"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Boxing Random"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Fire B, Water G"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Fire B, Water G 2"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Fire B, Water G 3"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Fire B, Water G 4"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Fire B, Water G 5"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Fire B, Water G 6"</p>
+     </div>
+    </div>
+</div>
+     <!-- ====== 1.2.0 END ===== -->
+     <!-- ====== 1.1.0 START ===== -->
+       <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.1.0</h2>
+            <p class="date">Monday, 29 May, 2023</p>
+        </div>
+        <div class="first">
+       <button class="new">New</button>
+          <p>Added game "Subway Surfers"</p>
+    </div>
+
+    <div class="second">
+        <button class="new">New</button>
+          <p>Added game "World Box"</p>
+     </div>
+
+     <div class="third">
+        <button class="new">New</button>
+          <p>Added game "Money Mart"</p>
+     </div>
+
+     <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Traffic Jam 3D"</p>
+     </div>
+      
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Stumble Guys"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Bow Masters"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Tower Defence"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Frogger"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Bloons TD"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Bloons TD 2"</p>
+     </div>
+
+       <div class="fourth">
+        <button class="new">New</button>
+          <p>Added game "Rebubbled"</p>
+     </div>
+    </div>
+</div>
+     <!-- ====== 1.1.0 END ===== -->
+     <!-- ====== 1.0.0 START ===== -->
+     
+     <div class="container">
+    <div class="rectangle">
+        <div class="information">
+            <h2>1.0.0</h2>
+            <p class="date">Monday, 22 May, 2023</p>
+        </div>
+        <div class="first">
+       <button class="new">New</button>
+          <p>Added an Admin Panel</p>
+    </div>
+
+    <div class="second">
+        <button class="new">New</button>
+      <p>Added "Request a game" feature</p>
+     </div>
+
+     <div class="third">
+        <button class="new">New</button>
+       <p>Added Changelog page</p>
+     </div>
+
+     <div class="fourth">
+        <button class="update">Update</button>
+       <p>Upgraded settings page</p>
+     </div>
+    </div>
+</div> 
+     <div class="btn-container">
+     <a href="#top">
+     <button class="to-top" id="scroll-bottom-button">
+       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+   </button>
+       </a>
+       </div>
+     <!-- ====== 1.0.0 END ===== -->
+      <div class="release">
+       <img src="assets/images/misc/tweet1.jpg" alt="tweet">
+     </div>
+
+     <script>
+    document.getElementById("scroll-bottom-button").addEventListener("click", function() { 
+  window.scrollTo(0,document.body.scrollHeight); 
+ }); 
+
+       // Read more/Less Buttons 
+
+function moreLess() {
+  var invisibleText = document.getElementById("invisible-text");
+  var btn = document.getElementById("btn");
+  var dots = document.getElementById("dots");
+
+  if (invisibleText.style.display === "none") {
+    invisibleText.style.display = "inline";
+    dots.style.display = "none";
+    btn.innerHTML = "Read Less";
+  } else {
+    invisibleText.style.display = "none";
+    dots.style.display = "inline";
+    btn.innerHTML = "Read More";
+  }
+}
+     </script>
+</body>
+</html>
