@@ -46,7 +46,7 @@ app.get("/go", (req, res) => {
 });
 
 //--ADMIN LOGIN SYSTEM STARTS HERE--//
-var adminPassword = "CosmicDevs123!"; //Change this to the password you want to have. If you want it to be hidden, you can set this to an environment variable.
+var adminPassword = "Cosmicgames.schoolsearch.dev"; //Change this to the password you want to have. If you want it to be hidden, you can set this to an environment variable.
 
 app.get("/admin", (req, res) => {
 	var cookies = req.cookies; //The users cookies which we'll use to check if the user has the password cookie
