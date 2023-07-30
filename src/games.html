@@ -20,16 +20,6 @@
 <title>Games</title>
 <link rel="icon" href="assets/images/branding/favicon/cosmic.png" />
 <link rel="shortcut icon" href="assets/images/branding/favicon/cosmic.png" />
-<script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-WKJQ5QHQTJ");
-    </script>
-
   <style>
 .all {
   font-family: "Raleway", sans-serif;
@@ -165,7 +155,23 @@
     font-size: 12px;
   }
 }
+    .mobile {
+      display: none;
+    }
 
+    .gameFilter {
+  cursor: pointer;
+  border: 2px;
+  transition: 0.2s;
+  margin-top: 10px;
+  background-color: #333;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border-color: white;
+  color: white;
+  height: 50px;
+  width: 200px;
+}
   </style>
 </head>
 <script src="assets/js/index.js"></script>
@@ -196,6 +202,19 @@
   <input  tag="searchbar" class="searchbar" type="text" id="searchbar" onkeyup="search_animal()" name="search" placeholder="Search..">
 </center>
 </div>
+         <br>
+     <div>
+<select id="gameFilter" class="gameFilter">
+<option class="option" id="all" value="all">All Games</option>
+<option class="option" id="shooter" value="shooter">Shooter Games</option>
+<option class="option" id="cars" value="cars">Car Games</option>
+<option class="option" id="sim" value="sim">Simulator Games</option>
+<option class="option" id="sports" value="sports">Sport Games</option>
+<option class="option" id="idle" value="idle">Idle Games</option>
+<option class="option" id="2p" value="2p">Two player Games</option>
+<option class="option" id="mobile" value="mobile">Mobile Games</option>
+</select>
+</div>
 <script>
 const searchbar = document.getElementById("searchbar");
 searchbar.addEventListener("input", function() {
@@ -203,48 +222,21 @@ searchbar.addEventListener("input", function() {
     searchbar.style.height = "50px";
 });
 
-searchbar.addEventListener("keyup", function() {
-    if (searchbar.value === "") {
-        searchbar.style.width = "400px";
-        searchbar.style.height = "30px";
-    }
-});
+// searchbar.addEventListener("mouseover", function() {
+//     searchbar.style.height = "50px";
+// });
 
-searchbar.addEventListener("mouseover", function() {
-    searchbar.style.height = "50px";
-});
-
-searchbar.addEventListener("mouseout", function() {
-    if (searchbar.value === "") {
-        searchbar.style.height = "30px";
-    }
-});
 </script>
   <br>
+   <br>
   <h2>Games shown on this website are the property of their respective owners.</h2>
   <br>
      <h2>Total Games: 209</h2>
-     <div class="all">
-<div class="lefter">
-  <div class="text">Adventure Games</div>
-</div>
-<div class="left">
-  <div class="text">Fighting Games</div>
-</div>
-<div class="center">
-  <div class="explainer"><span>Out of<br>Order</span></div>
-  <div class="text">Car Games</div>
-  </div>
-<div class="right">
-  <div class="text">2 Player Games</div>
-</div>
-<div class="righter">
-  <div class="text">Boat Games</div>
-</div>
-</div>
-
+    <br>
      <br>
-     <div class="row">
+     <br>
+     <br>
+     <div class="row ">
       <div class="span1">
          <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://docs.google.com/forms/d/e/1FAIpQLSfRlt1oMLWfrJHzCAqMAYkJmAU_2hadgTK-3mIrQrTu7jfkMw/viewform?usp=sf_link')">
             <img style="border-radius: 25px;" src="/assets/images/icons/request.png" ></a>
@@ -252,31 +244,24 @@ searchbar.addEventListener("mouseout", function() {
          </div>
        </div>
      </div>
-     <div class="row">
+     <div class="row idle">
       <div class="span1">
          <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://hgentry.github.io/1/')">
-            <img style="border-radius: 25px;" src="/assets/images/icons/1.png" ></a>
+            <img style="border-radius: 25px;" src="https://i.imgur.com/C4MurlE.png" ></a>
           <p3>2048</p3>
          </div>
        </div>
      </div>
-         <div class="row">
+         <div class="row shooter 2p">
            <div class="span1">
               <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://1v1.lol')">
-                 <img style="border-radius: 25px;" src="/assets/images/icons/1v1-lol.png" ></a>
+                 <img style="border-radius: 25px;" src="https://i.imgur.com/93FqGKs.png" ></a>
+                <!-- /assets/images/icons/1v1.png -->
                <p3>1v1.LOL</p3>
               </div>
             </div>
           </div>
-<div class="row">
-  <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://v6p9d9t4.ssl.hwcdn.net/html/3325334/index.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/2D-Rocket-League.png"></a>
-      <p3>2D Rocket League</p3>
-    </div>
-  </div>
-</div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://lagged.com/api/play2/t-rex-3d2/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/trex-run-3D.webp"></a>
@@ -284,7 +269,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/3d-car-simulator/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/3d-car-sim.png"></a>
@@ -300,7 +285,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://8ball-pool.io')">
         <img style="border-radius: 25px;" src="/assets/images/icons/8ball.png"></a>
@@ -308,7 +293,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sim">
 <div class="span1">
 <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://static.arcadespot.com/retroemulator.php?system=nds&game=2017/10/animal-crossing-wild-world1.zip')">
   <img style="border-radius: 25px;" src="/assets/images/icons/acww.png" ></a>
@@ -316,7 +301,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://than1089.github.io/adventure-capitalist/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/adventure-capitalist.jpg" ></a>
@@ -324,7 +309,7 @@ searchbar.addEventListener("mouseout", function() {
      </div>
    </div>
  </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('agar.io')">
         <img style="border-radius: 25px;" src="/assets/images/icons/agario.png"></a>
@@ -332,15 +317,15 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://among-us-online.podcast14.repl.co')">
         <img style="border-radius: 25px;" src="/assets/images/icons/scratch-among-us.png"></a>
-      <p3>Among Us [beta]</p3>
+      <p3>Among Us</p3>
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/rungame/angry-gran-run/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/angry-gran-run.png"></a>
@@ -348,7 +333,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row mobile">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/new3723/ape-sling/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/ape-sling.png"></a>
@@ -356,15 +341,15 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
- <div class="row">
+ <div class="row sports 2p">
   <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/rvvASMiM/bf1268dccb5d43e7970bb3edaa54afc8/index.html')">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/new3723/basket-random/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/br.jpeg"></a>
       <p3>Basket Random</p3>
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports 2p">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/soccer-random')">
     <img style="border-radius: 25px;" src="/assets/images/icons/soccer-random.png"></a>
@@ -372,7 +357,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports 2p">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/volley-random')">
     <img style="border-radius: 25px;" src="/assets/images/icons/volley-random.jpeg"></a>
@@ -380,7 +365,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports 2p">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/boxing-random')">
     <img style="border-radius: 25px;" src="/assets/images/icons/boxing-random.png"></a>
@@ -388,7 +373,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports 2p">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/69d78d071f704fa183d75b4114ae40ec/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/basketball-stars.png"></a>
@@ -396,7 +381,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports 2p">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.basketbros.io/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/basket-bros.png"></a>
@@ -404,7 +389,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.basketballlegends.fun/gamedata/basketball-legends-2020')">
     <img style="border-radius: 25px;" src="/assets/images/icons/basketball-legends.png"></a>
@@ -412,7 +397,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://adfree3kh0.github.io/projects/bigredbutton/index.html')">
     <img style="border-radius: 25px;" src="/assets/images/icons/big-red-btn.png"></a>
@@ -420,7 +405,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-     <div class="row">
+     <div class="row sports">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://f.silvergames.com/emu/waffle/?id=1')">
         <img style="border-radius: 25px;" src="/assets/images/icons/bow-masters.jpeg" ></a>
@@ -428,7 +413,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://xlegends.github.io/bitlife/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/bitlife.png" ></a>
@@ -436,7 +421,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/block-world')">
     <img style="border-radius: 25px;" src="/assets/images/icons/blockworld.png"></a>
@@ -468,7 +453,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.abcya.com/games/create_and_build_car')">
     <img style="border-radius: 25px;" src="/assets/images/icons/create-a-car.png"></a>
@@ -484,7 +469,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/cars-thief/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/car-theif.jpg"></a>
@@ -492,7 +477,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/fix/extreme-car-parking/a')">
         <img style="border-radius: 25px;" src="/assets/images/icons/car-parking.png"></a>
@@ -558,7 +543,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 <div class="row">
   <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://interstellarnetwork.github.io/Interstellar-Assets/play/cluster-rush/index.html'); load()">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://mathgames66.github.io/7462e5fd-cbf3-4484-91ad-ad8574157409/content/w8.snokido.com/games/unity-webgl/cluster-rush/index.html'); load()">
     <img style="border-radius: 25px;" src="/assets/images/icons/cluster-rush.webp" ></a>
       <p3>Cluster Rush</p3>
     </div>
@@ -576,7 +561,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://orteil.dashnet.org/cookieclicker/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/cookieclicker.png" ></a>
@@ -586,7 +571,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/demolition-derby-crash-racing/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/crash-racing.png" ></a>
@@ -596,7 +581,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/6742f8b0c489461eab8eeb3d401cd15a/')">
     <img style="border-radius: 25px;" src="/assets/images/icons/crazy-tycoon.jpg" ></a>
@@ -640,16 +625,18 @@ searchbar.addEventListener("mouseout", function() {
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://v6p9d9t4.ssl.hwcdn.net/html/4017918/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/deepest-sword.png"></a>
+        <!-- /assets/images/icons/deepest-sword.png -->
       <p3>Deepest Sword</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://diep.io/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/diep.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/Om1jg8p.png"></a>
+        <!-- /assets/images/icons/diep.png -->
       <p3>Diep.io</p3>
     </div>
   </div>
@@ -659,7 +646,8 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://dogeminer.se/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/doge-miner-1.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/bIFke4F.png"></a>
+        <!-- /assets/images/icons/doge-miner-1.png -->
       <p3>Doge Miner 1</p3>
     </div>
   </div>
@@ -668,14 +656,15 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://donitz.itch.io/dreader'); load(); mouse()">
-        <img style="border-radius: 25px;" src="/assets/images/icons/dreader.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/xx8EKqI.png"></a>
+        <!-- /assets/images/icons/dreader.png -->
       <p3>Dreader</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://watchdocumentaries.com/wp-content/uploads/games/drift-boss/'); load(); mouse()">
         <img style="border-radius: 25px;" src="/assets/images/icons/db.png"></a>
@@ -685,27 +674,29 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/drift-hunters/'); load()">
-        <img style="border-radius: 25px;" src="/assets/images/icons/drift-hunters.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/quQQvWG.png"></a>
+        <!-- /assets/images/icons/drift-hunters.png -->
       <p3>Drift Hunters</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/game131022/drive-mad/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/drive-mad.jpg" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/DpdevtF.png" ></a>
+       <!-- /assets/images/icons/drive-mad.jpg -->
       <p3>Drive Mad</p3>
      </div>
    </div>
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://www.algebrashelper.com/dumb-ways-to-die')">
         <img style="border-radius: 25px;" src="/assets/images/icons/dwtd.png" ></a>
@@ -718,14 +709,15 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/fix/dunkbrush/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/dunk-brush.png" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/C57Dy1b.png" ></a>
+       <!-- /assets/images/icons/dunk-brush.png -->
       <p3>Dunk Brush</p3>
      </div>
    </div>
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://nate-games.github.io/0/g/minecraft/game/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mc.webp" ></a>
@@ -735,20 +727,22 @@ searchbar.addEventListener("mouseout", function() {
  </div>
  </div>
  </div>
- <div class="row">
+ <div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/rungame/eagle-ride/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/eagle-ride.png" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/8jBYErK.png" ></a>
+       <!-- /assets/images/icons/eagle-ride.png -->
       <p3>Eagle Ride</p3>
      </div>
    </div>
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/eggy-car/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/eggy-car.png" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/7jD8pa6.png" ></a>
+       <!-- /assets/images/icons/eggy-car.png -->
       <p3>Eggy Car</p3>
      </div>
    </div>
@@ -758,7 +752,8 @@ searchbar.addEventListener("mouseout", function() {
   <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/updatefaqs/elasticman/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/elastic-man.jpg" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/DvFXFUb.png" ></a>
+       <!-- /assets/images/icons/elastic-man.jpg -->
       <p3>Elastic Man</p3>
      </div>
    </div>
@@ -768,24 +763,26 @@ searchbar.addEventListener("mouseout", function() {
  <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('games/electric_man_2/index.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/electricman-2.jpeg" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/Rk5009N.png" ></a>
+       <!-- /assets/images/icons/electricman-2.jpeg -->
       <p3>Electric Man 2</p3>
      </div>
    </div>
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/endless-truck/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/endless-truck1.png" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/AVfqsX5.png" ></a>
+       <!-- /assets/images/icons/endless-truck1.png -->
       <p3>Endless Truck</p3>
      </div>
    </div>
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/fireboy-and-watergirl-in-the-forest-temple')">
         <img style="border-radius: 25px;" src="/assets/images/icons/FBWG.png" ></a>
@@ -795,17 +792,17 @@ searchbar.addEventListener("mouseout", function() {
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/fireboy-and-watergirl-2-in-the-light-temple')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/FBWG2.jpg" ></a>
+        <img style="border-radius: 25px;" src="/assets/images/icons/FBWG2.png" ></a>
       <p3>Fire Boy Water Girl 2</p3>
      </div>
    </div>
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/fireboy-and-watergirl-3-in-the-ice-temple')">
         <img style="border-radius: 25px;" src="/assets/images/icons/FBWG3.png" ></a>
@@ -815,7 +812,7 @@ searchbar.addEventListener("mouseout", function() {
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/fireboy-and-watergirl-4-the-crystal-temple')">
         <img style="border-radius: 25px;" src="/assets/images/icons/FBWG4.jpg" ></a>
@@ -825,7 +822,7 @@ searchbar.addEventListener("mouseout", function() {
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/fireboy-and-watergirl-5-elements')">
         <img style="border-radius: 25px;" src="/assets/images/icons/FBWG5.jpg" ></a>
@@ -835,7 +832,7 @@ searchbar.addEventListener("mouseout", function() {
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/fireboy-and-watergirl-6-fairy-tales')">
         <img style="border-radius: 25px;" src="/assets/images/icons/FBWG6.jpg" ></a>
@@ -855,7 +852,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/flying-car-simulator/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/flying-car-sim.png"></a>
@@ -891,7 +888,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row sports">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/football-legends/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/football-legends.png"></a>
@@ -901,7 +898,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/fortride-open-world/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/fortride.png"></a>
@@ -929,7 +926,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row shooters">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/getaway-shootout/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/getaway-shootout.png"></a>
@@ -937,7 +934,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/go-kart-go-ultra/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/go-kart-go.png"></a>
@@ -945,7 +942,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/game131022/gold-digger-frvr/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/gold-digger.png"></a>
@@ -961,7 +958,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/game131022/golfinity/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/golfinity.png"></a>
@@ -993,7 +990,7 @@ searchbar.addEventListener("mouseout", function() {
     </div> 
   </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/guess-the-kitty/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/guess-the-kitty.png"></a>
@@ -1001,7 +998,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
- <div class="row">
+ <div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.twoplayergames.org/embed/happy-wheels')">
         <img style="border-radius: 25px;" src="/assets/images/icons/happywheels.png"></a>
@@ -1012,7 +1009,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a  class="animals" onclick="go('https://webglmath.github.io/worlds-hardest-game-2/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/WHG.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/i2gjiW6.png"></a>
       <p3>Hardest Game 2</p3>
     </div>
   </div>
@@ -1020,7 +1017,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a  class="animals" onclick="go('https://webglmath.github.io/worlds-hardest-game-3/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/WHG2.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/O7siUNJ.png"></a>
       <p3>Hardest Game 3</p3>
     </div>
   </div>
@@ -1033,7 +1030,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row sports">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/Z/head-soccer-2023/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/head-soccer1.png"></a>
@@ -1043,7 +1040,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/highway-racer-3d/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/highway-racer.png"></a>
@@ -1086,7 +1083,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/icy-purple-head-2/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/icy-purple-head.jfif"></a>
+        <img style="border-radius: 25px;" src="https://imgs2.dab3games.com/icy-purple-head-2-game17.png"></a>
       <p3>Icy Purple Head 2</p3>
     </div>
   </div>
@@ -1103,7 +1100,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/game131022/idle-dice/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/idle-dice.png"></a>
@@ -1113,7 +1110,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/fix/idle-mining-empire/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/idle-mining.jpeg"></a>
@@ -1123,7 +1120,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/game131022/idle-startup-tycoon/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/idle-startup.jpeg"></a>
@@ -1133,7 +1130,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://f.silvergames.com/ruffle/player.php?id=204')">
         <img style="border-radius: 25px;" src="/assets/images/icons/interactive-buddy.png"></a>
@@ -1213,7 +1210,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.gameslol.net/data/waflash/index.php?g=635')">
         <img style="border-radius: 25px;" src="/assets/images/icons/ltf_idle.jpg"></a>
@@ -1243,7 +1240,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/mad-gunz/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mad-gunz.png"></a>
@@ -1253,7 +1250,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/mad-truck-challenge-special/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mad-trucks.png"></a>
@@ -1263,7 +1260,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://unblocked-games.s3.amazonaws.com/games/masked-io/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/masked-forces.jpg"></a>
@@ -1272,7 +1269,7 @@ searchbar.addEventListener("mouseout", function() {
   </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://static.arcadespot.com/retroemulator.php?system=n64&game=2017/06/mario-kart-64.zip')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mario-kart-64.jpg"></a>
@@ -1283,6 +1280,16 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 <div class="row">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/merge-cakes/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/merge-cakes.png"></a>
+      <p3>Merge Cakes</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamemonetize.co/ugi7ftbv2kgodcq7vful9u9v34wein5z/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mm.png"></a>
@@ -1312,7 +1319,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/rvvASMiM/5b0abd4c0faa4f5eb190a9a16d5a1b4c/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mx3m.jpg"></a>
@@ -1322,7 +1329,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://h0jokl1egt0fd4oc8qv3j0tltl9jbqhn-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://649025137-174029463385024710.preview.editmysite.com/uploads/b/139890129-767696982876512205/files/mx3mpp.xml')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mx3m.jpeg"></a>
@@ -1332,7 +1339,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/rvvASMiM/b8a342904608470a9f3382337aca3558/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mx3m-spooky.png"></a>
@@ -1342,7 +1349,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://sites.google.com/site/s017q3e/moto-x3m-4-winter.xml')">
         <img style="border-radius: 25px;" src="/assets/images/icons/mx3m-winter.jpeg"></a>
@@ -1380,7 +1387,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row sports">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.onlinesoccermanager.com/PrivacyNotice?nextUrl=%2F')">
         <img style="border-radius: 25px;" src="/assets/images/icons/osm.jpeg"></a>
@@ -1390,7 +1397,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://f.silvergames.com/emu/waffle/?id=5458')">
         <img style="border-radius: 25px;" src="/assets/images/icons/bakeria.jpg"></a>
@@ -1400,7 +1407,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://f.silvergames.com/emu/waffle/?id=3246')">
         <img style="border-radius: 25px;" src="/assets/images/icons/cupcakeria.png"></a>
@@ -1410,7 +1417,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-     <div class="row">
+     <div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://papasfreezeria.io/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/papas-freezeria.png"></a>
@@ -1420,7 +1427,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-          <div class="row">
+          <div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://www.crazygames.com/game/papas-sushiria')">
         <img style="border-radius: 25px;" src="/assets/images/icons/sushiria.png"></a>
@@ -1429,7 +1436,7 @@ searchbar.addEventListener("mouseout", function() {
   </div>
 </div>
 </div>
-     <div class="row">
+     <div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://f.silvergames.com/ruffle/player.php?id=1360')">
         <img style="border-radius: 25px;" src="/assets/images/icons/pizzeria.png"></a>
@@ -1475,7 +1482,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a href="games/particle-clicker/index.html">
         <img style="border-radius: 25px;" src="/assets/images/icons/pc.png"></a>
@@ -1485,7 +1492,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://94bfktj403i6m18as4vkvtreqd0ohci4-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://274019683-173520394482650759.preview.editmysite.com/uploads/b/139890129-131715539788281629/files/ps.xml')">
         <img style="border-radius: 25px;" src="/assets/images/icons/pixel-shooter.png"></a>
@@ -1526,21 +1533,11 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('http://raw.githack.com/3kh0/3kh0-assets/main/precision-client/index.html')">
     <img style="border-radius: 25px;" src="/assets/images/icons/precision.png" ></a>
       <p3>Precision Client</p3>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="row">
-  <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://play.geforcenow.com/games?game-id=1dd07d47-6601-42f7-80e9-e4d8db08ea1b&lang=en_US&asset-id=01_44417553-d33e-4f06-a02a-48c3d8e642e2')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/r6.jpg"></a>
-      <p3>Rainbow Six Siege</p3>
     </div>
   </div>
 </div>
@@ -1588,29 +1585,9 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 <div class="row">
   <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://nowgg.me/interstellar.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/roblox.png"></a>
-      <p3 style="color: #CBC3E3">Roblox</p3>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="row">
-  <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://v6p9d9t4.ssl.hwcdn.net/html/565140/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/rl.jpg"></a>
       <p3>Rocket League</p3>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="row">
-  <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://nowgg.me')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/sideswipe.png"></a>
-      <p3 style="color: #CBC3E3">Rocket League: SS</p3>
     </div>
   </div>
 </div>
@@ -1626,7 +1603,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/rvvASMiM/c3a70ae98547407a92ebedca8b79fdfa/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/rooftop.jpeg"></a>
@@ -1686,7 +1663,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://smashkarts.io/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/smashkarts.png"></a>
@@ -1696,7 +1673,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://games.crazygames.com/en_US/snowball-io/index.html')">
         <img style="border-radius: 25px;" src="/assets/images/icons/snowball.jpg"></a>
@@ -1716,6 +1693,26 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
+<div class="row idle">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/stickman-fighter-epic-battle/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/stickman-fighter.png"></a>
+      <p3>Stickman Fighter</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/stickman-fighter-epic-battle-2/l')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/stickman-fighter2.png"></a>
+      <p3>Stickman Fighter 2</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy" class="animals"> <a href="games/stickman-hook/index.html">
@@ -1728,9 +1725,19 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 <div class="row">
   <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://nowgg.me/interstellar.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/stumble-guys.webp"></a>
-      <p3 style="color:#CBC3E3">Stumble Guys</p3>
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://webglmath.github.io/stickmerge/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/stick-merge.png"></a>
+      <p3>Stick Merge</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row cars">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/edit/stunt-car-challenge-3/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/stunt-car3.png"></a>
+      <p3>Stunt Car 3</p3>
     </div>
   </div>
 </div>
@@ -1759,7 +1766,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/updatefaqs/subway-surfers-bali/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/ss-bali.webp" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/C5H1Jva.png" ></a>
       <p3>SS: Bali</p3>
      </div>
    </div>
@@ -1769,7 +1776,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/updatefaqs/subway-surfers-hongkong/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/ss-havana.png" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/pWMTflt.png" ></a>
       <p3>SS: Havana</p3>
      </div>
    </div>
@@ -1779,7 +1786,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/updatefaqs/subway-surfers-mumbai/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/ss-mumbai.webp" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/DrQimI5.png" ></a>
       <p3>SS: Mumbai</p3>
      </div>
    </div>
@@ -1789,7 +1796,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/updatefaqs/subway-surfers-nyc/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/ss-nyc.webp" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/VvF9zvX.png" ></a>
       <p3>SS: NYC</p3>
      </div>
    </div>
@@ -1799,7 +1806,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/updatefaqs/subway-surfers-singapore/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/ss-singapore.png" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/0fiqxNq.png" ></a>
       <p3>SS: Singapore</p3>
      </div>
    </div>
@@ -1809,7 +1816,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a class="game" onclick="go('https://ubg77.github.io/updatefaqs/subway-surfers-winter-holiday/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/ss-winter.webp" ></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/r4c6F5y.png" ></a>
       <p3>SS: Winter</p3>
      </div>
    </div>
@@ -1826,10 +1833,10 @@ searchbar.addEventListener("mouseout", function() {
  </div>
  </div>
  </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/super-bike-the-champion/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/super-bike.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/NMZNGOt.png"></a>
       <p3>Super Bike</p3>
     </div>
   </div>
@@ -1866,7 +1873,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('http://chat.kongregate.com/gamez/0027/1653/live/index.html?kongregate_game_version=1554392772')">
         <img style="border-radius: 25px;" src="/assets/images/icons/supply-chainidle.png"></a>
@@ -1879,7 +1886,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://bitlifeonline.github.io/class12523/swingo/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/swingo.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/ShY3JN2.png"></a>
       <p3>Swingo</p3>
     </div>
   </div>
@@ -1889,7 +1896,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/swipe-fighter-heroes/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/swipe-fighters.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/lWOWxVF.png"></a>
       <p3>Swipe Fighters</p3>
     </div>
   </div>
@@ -1901,6 +1908,15 @@ searchbar.addEventListener("mouseout", function() {
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://static.arcadespot.com/retroemulator.php?system=nds&game=2017/11/the-simpsons-game.zip')">
         <img style="border-radius: 25px;" src="/assets/images/icons/the-simpsons-game.png"></a>
       <p3>The Simpsons</p3>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row shooter">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://static.arcadespot.com/retroemulator.php?system=nds&game=2017/11/the-simpsons-game.zip')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/squid-shooter.png"></a>
+      <p3>Squid Shooter</p3>
     </div>
   </div>
 </div>
@@ -1927,7 +1943,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/rungame/the-speed-ninja/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/the-speed-ninja.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/Xs9QOMQ.png"></a>
       <p3>The Speed Ninja</p3>
     </div>
   </div>
@@ -1937,16 +1953,16 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/game131022/thumb-fighter')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/thumb-fighter.jpg"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/JRISQCC.png"></a>
       <p3>Thumb Fighter</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row sim">
   <div class="span1">
-      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://bitlifeonline.github.io/class12523/tiger-simulator-3d/')">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://i.imgur.com/Mzj2vX0.png')">
         <img style="border-radius: 25px;" src="/assets/images/icons/tiger-sim.png"></a>
       <p3>Tiger Sim</p3>
     </div>
@@ -1954,7 +1970,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://bitlifeonline.github.io/class2623/time-shooter/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/time-shooter.jfif"></a>
@@ -1964,10 +1980,10 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row idle">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/tiny-fishing/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/tiny-fishing.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/bjyySib.png"></a>
       <p3>Tiny Fishing</p3>
     </div>
   </div>
@@ -1977,17 +1993,17 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/new5923/tomb/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/tomb.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/oDZ9YBe.png"></a>
       <p3>Tomb</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/edit/top-speed-3d/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/top-speed.jpeg"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/hNOiCQp.png"></a>
       <p3>Top Speed 3D</p3>
     </div>
   </div>
@@ -2004,7 +2020,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://html5.gamedistribution.com/337302b23b5943d8bcfc501d81d50cdb/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/traffic-jam.png"></a>
@@ -2014,10 +2030,10 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row cars">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://webglmath.github.io/traffic-mania/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/traffic-mania.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/oXaHv6t.png"></a>
       <p3>Traffic Mania</p3>
     </div>
   </div>
@@ -2067,7 +2083,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/rungame/tunnel-rush-2/)">
-    <img style="border-radius: 25px;" src="/assets/images/icons/tunnel-rush2.png"></a>
+    <img style="border-radius: 25px;" src="https://i.imgur.com/wiBsM5H.png"></a>
       <p3>Tunnel Rush 2</p3>
     </div>
   </div>
@@ -2077,7 +2093,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/rungame/tunnel-rush-2/)">
-    <img style="border-radius: 25px;" src="/assets/images/icons/tunnel-rush-cars.png"></a>
+    <img style="border-radius: 25px;" src="https://i.imgur.com/HQb0EnH.png"></a>
       <p3>Tunnel Rush: Cars</p3>
     </div>
   </div>
@@ -2104,7 +2120,7 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://venge.io/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/venge.png"></a>
@@ -2117,7 +2133,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://raw.githack.com/3kh0/3kh0-assets/main/vex3/index.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/vex3.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/aAiRzPe.png"></a>
       <p3>Vex 3</p3>
     </div>
   </div>
@@ -2127,7 +2143,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://raw.githack.com/3kh0/3kh0-assets/main/vex5/index.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/vex4.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/IV7RdCK.png"></a>
       <p3>Vex 4</p3>
     </div>
   </div>
@@ -2148,7 +2164,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/newgame/vex6/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/vex6.jpg"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/V7pjpKf.png"></a>
       <p3>Vex 6</p3>
     </div>
   </div>
@@ -2165,30 +2181,30 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://classroomjq.github.io/class276223/vegasclash3d/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/vegas-clash.webp"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/isi6fUW.png"></a>
       <p3>Vegas Clash</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://classroomjq.github.io/class276223/subway-clash-3d/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/subway-clash.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/ismJ1LJ.png"></a>
       <p3>Subway Clash</p3>
     </div>
   </div>
 </div>
 </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://classroomjq.github.io/class276223/winter-clash-3d/')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/winter-clash.jpg"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/xBDPjcn.png"></a>
       <p3>Winter Clash</p3>
     </div>
   </div>
@@ -2209,7 +2225,7 @@ searchbar.addEventListener("mouseout", function() {
 <div class="row">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a  class="animals" onclick="go('https://raw.githack.com/3kh0/3kh0-assets/main/xx142-b2exe/index.html')">
-        <img style="border-radius: 25px;" src="/assets/images/icons/xx.png"></a>
+        <img style="border-radius: 25px;" src="https://i.imgur.com/ThL4ee5.png"></a>
       <p3>xx142-b2exe</p3>
     </div>
   </div>
@@ -2222,7 +2238,7 @@ searchbar.addEventListener("mouseout", function() {
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row shooter">
   <div class="span1">
       <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://zombsroyale.io/')">
         <img style="border-radius: 25px;" src="/assets/images/icons/zombs-royale.png"></a>
@@ -2232,9 +2248,82 @@ searchbar.addEventListener("mouseout", function() {
 </div>
 </div>
 </div>
+<div class="row mobile">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/file/make-up-runner/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/makeup-run.webp"></a>
+      <p3>Make Up Runner</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row mobile">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/file/merge-alphabet/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/merge.png"></a>
+      <p3>Merge Alphabet</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row mobile">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://ubg77.github.io/game131022/tap-tap-shots/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/tap-tap-shots.jpeg"></a>
+      <p3>Tap Tap Shots</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row mobile">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/new3623/urban-stack/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/urban-stacks.jpeg"></a>
+      <p3>Urban Stacks</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row mobile">
+  <div class="span1">
+      <div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card animals" loading="lazy"><a onclick="go('https://slope-game.github.io/file/weapon/')">
+        <img style="border-radius: 25px;" src="/assets/images/icons/zombs-royale.png"></a>
+      <p3>Weapon</p3>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 <script>
 function load() { alert('This game takes a while to load, It is working though!'); }
 function mouse() { alert('This game only works with a mouse.'); }
+  
+  // gameFilter
+
+const gameFilter = document.getElementById("gameFilter");
+const gameRows = document.getElementsByClassName("row");
+
+gameFilter.addEventListener("change", function() {
+  const selectedValue = gameFilter.value;
+
+  for (let i = 0; i < gameRows.length; i++) {
+    const row = gameRows[i];
+    
+    if (selectedValue === "all") {
+      row.style.display = "block";
+    } else if (row.classList.contains(selectedValue)) {
+      row.style.display = "block";
+    } else {
+      row.style.display = "none";
+    }
+  }
+});
+
+  
 </script>
 
   <script src="./uv/uv.bundle.js"></script>
