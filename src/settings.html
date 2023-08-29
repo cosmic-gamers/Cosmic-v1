@@ -9,14 +9,29 @@
 <script async src="/assets/js/panic.js"></script>
 <script src="assets/js/themecontrol.js"></script>
 <script src="assets/js/settings/themes.js"></script>
+<style>
+  .color-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 5px;
+    margin-top: 8px;
+  border: none;
+  cursor: pointer;
+}
 
-<script>
-  // window.dataLayer = window.dataLayer || [];
-  // function gtag(){dataLayer.push(arguments);}
-  // gtag('js', new Date());
+#barbieBtn {
+  background-color: #FFC0CB;
+}
 
-  // gtag('config', 'G-WKJQ5QHQTJ');
-</script>
+#babyBlueBtn {
+  background-color: #89CFF0;
+}
+
+#hackerBtn {
+  background-color: #66ff00;
+}
+</style>
 </head>
 <body>
 
@@ -70,9 +85,14 @@
 <h4><b>Tab Cloaker</b></h4>
 </div>
 <form>
-<input class="tab-cloaker-form" type="text" id="icon" placeholder="Change Tab Icon" name="icon">
-<input class="tab-cloaker-form" type="text" id="name" name="name" placeholder="Change Tab Name">
-<input class="tab-cloaker-form" type="button" value="Save" onclick="saveIcon(); saveName(); redirectToMainDomain() ">
+<select style="margin-top:10px;" id="websiteSelect">
+        <option value="">Select Website</option>
+        <option value="amazon">Amazon</option>
+        <option value="google">Google</option>
+        <option value="ebay">eBay</option>
+      </select>
+<input style="margin-top:10px;" type="text" id="titleInput" placeholder="Change tab Name">
+<input class="tab-cloaker-form" type="button"id="titleSumbitBtn" value="Save" onclick="saveIcon(); saveName(); redirectToMainDomain() ">
 </form>
 </div>
 </div>
@@ -89,17 +109,23 @@
 <div class="card">
 <div class="container">
 <div class="title">
-<h4><b>Coming Soon</b></h4>
+<h4><b>Music Player</b></h4>
 </div>
-<p>Coming Soon! Any Suggestions?</p>
 </div>
+  <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/playlist/1479458365" width="70%" height="186" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
 </div>
 <div class="card">
 <div class="container">
 <div class="title">
-<h4><b>Coming Soon!</b></h4>
+<h4><b>Colour Picker</b></h4>
 </div>
-<p>Coming Soon! Any Suggestions?</p>
+<p>Choose your website colours</p>
+
+  <button class="color-btn" id="barbieBtn"></button>
+  <button class="color-btn" id="babyBlueBtn"></button>
+  <button class="color-btn" id="hackerBtn"></button>
+
+  
 </div>
 </div>
 </div>
@@ -111,21 +137,74 @@
 <script src="/assets/js/settings/name.js"></script>
 <script src="/assets/js/settings/changes.js"></script>
 <script>
-    if (localStorage.getItem('cloak')) {
-      const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
-      document.getElementById('tab-cloak').value = cloakValue;
-    }
-    document.getElementById('tab-cloak').addEventListener('change', function() {
-      localStorage.setItem('cloak', this.value === 'true' ? 'true' : 'false');
+
+  // 
+const titleInput = document.getElementById("websiteSelect");
+
+titleInput.addEventListener("input", function() {
+  document.title = titleInput.value;
+});
+
+  //
+    document.addEventListener("DOMContentLoaded", function() {
+      var titleInput = document.getElementById("titleInput");
+
+      if (localStorage.getItem("title")) {
+        titleInput.value = localStorage.getItem("title");
+        document.title = localStorage.getItem("title");
+      }
+
+      titleInput.addEventListener("input", function() {
+        localStorage.setItem("title", this.value);
+        document.title = this.value;
+
+        console.log('Input value:', this.value);
+        console.log('Webpage title:', document.title);
+        console.log('Stored title:', localStorage.getItem("title"));
+      });
     });
-  </script>
-<script>
-    if (localStorage.getItem('Transitions')) {
-      const cloakValue = localStorage.getItem('Transitions') === 'true' ? 'true' : 'false';
-      document.getElementById('tab-cloak').value = cloakValue;
-    }
-    document.getElementById('Transitions').addEventListener('change', function() {
-      localStorage.setItem('Transitions', this.value === 'true' ? 'true' : 'false');
-    });
+
+  //color picker / background changer 
+
+document.getElementById("barbieBtn").addEventListener("click", function() {
+  var selectedColor = "FFC0CB";
+  console.log("Selected color:", selectedColor);
+  document.body.style.setProperty("--bg-c", "#" + selectedColor);
+  removeSelectedColor();
+  setSelectedColor(selectedColor);
+});
+
+document.getElementById("babyBlueBtn").addEventListener("click", function() {
+  var selectedColor = "89CFF0";
+  console.log("Selected color:", selectedColor);
+  document.body.style.setProperty("--bg-c", "#" + selectedColor);
+  removeSelectedColor();
+  setSelectedColor(selectedColor);
+});
+
+document.getElementById("hackerBtn").addEventListener("click", function() {
+  var selectedColor = "66ff00";
+  console.log("Selected color:", selectedColor);
+  document.body.style.setProperty("--bg-c", "#" + selectedColor);
+  removeSelectedColor();
+  setSelectedColor(selectedColor);
+});
+
+// On page load, check if a selected color is stored in the session cookie and apply it
+window.addEventListener("load", function() {
+  var storedColor = getSelectedColor();
+  if (storedColor) {
+    console.log("Stored color:", storedColor);
+    document.body.style.setProperty("--bg-c", "#" + storedColor);
+    document.style.color = "#000";
+  }
+});
+
+  document.getElementById("hackerBtn").addEventListener("click", function() {
+  var cards = document.getElementsByClassName("card");
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].style.color = "black";
+  }
+});
   </script>
 </html>
